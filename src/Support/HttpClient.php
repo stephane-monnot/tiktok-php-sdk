@@ -11,7 +11,7 @@ class HttpClient
     public static function http(string $token): PendingRequest
     {
         return Http::baseUrl(self::API_BASE_URL)
-            ->withHeader('Access-Token', $token)
+            ->withHeaders(['Access-Token' => $token])
             ->asJson();
     }
 }
