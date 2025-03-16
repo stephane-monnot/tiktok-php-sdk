@@ -74,17 +74,23 @@ class Property extends Model
         return $this;
     }
 
-    public function setOrderId(string|int|null $value): self
+    /**
+     * @param string|int|null $value
+     * @return $this
+     */
+    public function setOrderId($value): self
     {
         $this->order_id = (string) $value ?? '';
-
         return $this;
     }
 
-    public function setShopId(string|int|null $value): self
+    /**
+     * @param string|int|null $value
+     * @return $this
+     */
+    public function setShopId($value): self
     {
         $this->shop_id = $value ?? '';
-
         return $this;
     }
 }

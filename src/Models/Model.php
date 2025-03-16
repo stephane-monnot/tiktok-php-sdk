@@ -63,7 +63,9 @@ class Model
      */
     private function getPropertyType(string $property): ?string
     {
-        return (new ReflectionProperty($this, $property))->getType()?->getName();
+        $reflectionProperty = new ReflectionProperty($this, $property);
+        $type = $reflectionProperty->getType();
+        return $type ? $type->getName() : null;
     }
 
     /**
