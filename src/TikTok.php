@@ -8,10 +8,19 @@ use Msaaq\TikTok\Support\HttpClient;
 
 class TikTok
 {
-    private PendingRequest $http;
+    /** @var PendingRequest */
+    private $http;
+    
+    /** @var string */
+    private $accessToken;
+    
+    /** @var string */
+    private $pixelId;
 
-    public function __construct(public string $accessToken, public string $pixelId)
+    public function __construct(string $accessToken, string $pixelId)
     {
+        $this->accessToken = $accessToken;
+        $this->pixelId = $pixelId;
         $this->http = HttpClient::http($this->accessToken);
     }
 
