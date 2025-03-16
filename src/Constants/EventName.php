@@ -18,4 +18,4 @@ class EventName
     const SUBMIT_FORM = 'SubmitForm';
     const COMPLETE_REGISTRATION = 'CompleteRegistration';
     const SUBSCRIBE = 'Subscribe';
-} 
+}
