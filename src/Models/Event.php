@@ -18,42 +18,42 @@ class Event extends Model
 
     public ?Page $page = null;
 
-    public function setEventName(EventName $value): static
+    public function setEventName(EventName $value): self
     {
         $this->event = $value;
 
         return $this;
     }
 
-    public function setEventTime($value): static
+    public function setEventTime($value): self
     {
         $this->event_time = $value;
 
         return $this;
     }
 
-    public function setEventId($value): static
+    public function setEventId($value): self
     {
         $this->event_id = $value;
 
         return $this;
     }
 
-    public function setUser(User $value): static
+    public function setUser(User $value): self
     {
         $this->user = $value;
 
         return $this;
     }
 
-    public function setProperties(Property $value): static
+    public function setProperties(Property $value): self
     {
         $this->properties = $value;
 
         return $this;
     }
 
-    public function setPage(Page $value): static
+    public function setPage(Page $value): self
     {
         $this->page = $value;
 

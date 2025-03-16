@@ -16,42 +16,42 @@ class Content extends Model
 
     public ?string $brand;
 
-    public function setPrice(float|int $value): static
+    public function setPrice(float|int $value): self
     {
         $this->price = $value;
 
         return $this;
     }
 
-    public function setQuantity(int $value): static
+    public function setQuantity(int $value): self
     {
         $this->quantity = $value;
 
         return $this;
     }
 
-    public function setContentId(string $value): static
+    public function setContentId(string $value): self
     {
         $this->content_id = $value;
 
         return $this;
     }
 
-    public function setContentName(string $value): static
+    public function setContentName(string $value): self
     {
         $this->content_name = $value;
 
         return $this;
     }
 
-    public function setContentCategory(string $value): static
+    public function setContentCategory(string $value): self
     {
         $this->content_category = $value;
 
         return $this;
     }
 
-    public function setBrand(string $value): static
+    public function setBrand(string $value): self
     {
         $this->brand = $value;
 

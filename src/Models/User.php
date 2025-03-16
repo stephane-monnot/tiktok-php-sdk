@@ -24,49 +24,49 @@ class User extends Model
 
     public array $external_id;
 
-    public function setClickId(?string $ttclid): static
+    public function setClickId(?string $ttclid): self
     {
         $this->ttclid = $ttclid ?? '';
 
         return $this;
     }
 
-    public function setCookieId(?string $ttp): static
+    public function setCookieId(?string $ttp): self
     {
         $this->ttp = $ttp ?? '';
 
         return $this;
     }
 
-    public function setIpAddress(?string $ip): static
+    public function setIpAddress(?string $ip): self
     {
         $this->ip = $ip ?? '';
 
         return $this;
     }
 
-    public function setUserAgent(?string $userAgent): static
+    public function setUserAgent(?string $userAgent): self
     {
         $this->user_agent = $userAgent ?? '';
 
         return $this;
     }
 
-    public function setEmails(array $emails): static
+    public function setEmails(array $emails): self
     {
         $this->email = $this->hashArrayValue($emails);
 
         return $this;
     }
 
-    public function setPhones(array $phones): static
+    public function setPhones(array $phones): self
     {
         $this->phone = $this->hashArrayValue($phones);
 
         return $this;
     }
 
-    public function setExternalIds(array $ids): static
+    public function setExternalIds(array $ids): self
     {
         $this->external_id = $this->hashArrayValue($ids);
 
