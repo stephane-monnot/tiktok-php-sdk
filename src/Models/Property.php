@@ -4,24 +4,29 @@ namespace Msaaq\TikTok\Models;
 
 class Property extends Model
 {
-    /**
-     * @var Content[]
-     */
-    public array $contents;
+    /** @var Content[] */
+    public $contents;
 
-    public ?string $content_type = '';
+    /** @var string|null */
+    public $content_type = '';
 
-    public ?string $currency = '';
+    /** @var string|null */
+    public $currency = '';
 
-    public ?float $value = null;
+    /** @var float|null */
+    public $value = null;
 
-    public ?string $query = '';
+    /** @var string|null */
+    public $query = '';
 
-    public ?string $description = '';
+    /** @var string|null */
+    public $description = '';
 
-    public string|int|null $order_id = '';
+    /** @var string|int|null */
+    public $order_id = '';
 
-    public string|int|null $shop_id = '';
+    /** @var string|int|null */
+    public $shop_id = '';
 
     /**
      * @param  Content[]  $value

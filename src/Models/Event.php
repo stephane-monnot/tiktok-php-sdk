@@ -2,26 +2,35 @@
 
 namespace Msaaq\TikTok\Models;
 
-use Msaaq\TikTok\Enums\EventName;
+use Msaaq\TikTok\Constants\EventName;
 
 class Event extends Model
 {
-    public EventName $event;
+    /** @var string */
+    public $event;
 
-    public string|int $event_time;
+    /** @var string|int */
+    public $event_time;
 
-    public string $event_id;
+    /** @var string */
+    public $event_id;
 
-    public ?User $user = null;
+    /** @var User|null */
+    public $user = null;
 
-    public Property $properties;
+    /** @var Property */
+    public $properties;
 
-    public ?Page $page = null;
+    /** @var Page|null */
+    public $page = null;
 
-    public function setEventName(EventName $value): self
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setEventName(string $value): self
     {
         $this->event = $value;
-
         return $this;
     }
 

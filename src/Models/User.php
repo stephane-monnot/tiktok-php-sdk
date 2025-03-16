@@ -4,25 +4,26 @@ namespace Msaaq\TikTok\Models;
 
 class User extends Model
 {
-    /**
-     * TikTok Click ID
-     */
-    public ?string $ttclid = '';
+    /** @var string|null */
+    public $ttclid = '';
 
-    /**
-     * Cookie ID (_ttp).
-     */
-    public ?string $ttp = '';
+    /** @var string|null */
+    public $ttp = '';
 
-    public ?string $ip = '';
+    /** @var string|null */
+    public $ip = '';
 
-    public ?string $user_agent = '';
+    /** @var string|null */
+    public $user_agent = '';
 
-    public array $email;
+    /** @var array */
+    public $email;
 
-    public array $phone;
+    /** @var array */
+    public $phone;
 
-    public array $external_id;
+    /** @var array */
+    public $external_id;
 
     public function setClickId(?string $ttclid): self
     {

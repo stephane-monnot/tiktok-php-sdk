@@ -8,10 +8,19 @@ use UnitEnum;
 
 class Model
 {
-    protected array $casts;
+    /** @var array */
+    protected $casts;
 
-    public function __construct(public array $__response = [])
+    /** @var array */
+    protected $__response;
+
+    /**
+     * @param array $__response
+     */
+    public function __construct(array $__response = [])
     {
+        $this->__response = $__response;
+        
         foreach ($__response as $property => $value) {
             if (! property_exists($this, $property)) {
                 continue;
@@ -48,12 +57,20 @@ class Model
         return null;
     }
 
+    /**
+     * @param string $property
+     * @return string|null
+     */
     private function getPropertyType(string $property): ?string
     {
         return (new ReflectionProperty($this, $property))->getType()?->getName();
     }
 
-    private function isEnum(string $property): bool|string
+    /**
+     * @param string $property
+     * @return string|false
+     */
+    private function isEnum(string $property)
     {
         if (! $type = $this->getPropertyType($property)) {
             return false;
@@ -62,7 +79,11 @@ class Model
         return enum_exists($type) ? $type : false;
     }
 
-    private function isModel(string $property): bool|string
+    /**
+     * @param string $property
+     * @return string|false
+     */
+    private function isModel(string $property)
     {
         if (! $type = $this->getPropertyType($property)) {
             return false;

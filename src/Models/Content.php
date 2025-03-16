@@ -4,22 +4,31 @@ namespace Msaaq\TikTok\Models;
 
 class Content extends Model
 {
-    public float|int|null $price;
+    /** @var float|int|null */
+    public $price;
 
-    public ?int $quantity;
+    /** @var int|null */
+    public $quantity;
 
-    public ?string $content_id;
+    /** @var string|null */
+    public $content_id;
 
-    public ?string $content_name;
+    /** @var string|null */
+    public $content_name;
 
-    public ?string $content_category;
+    /** @var string|null */
+    public $content_category;
 
-    public ?string $brand;
+    /** @var string|null */
+    public $brand;
 
-    public function setPrice(float|int $value): self
+    /**
+     * @param float|int $value
+     * @return $this
+     */
+    public function setPrice($value): self
     {
         $this->price = $value;
-
         return $this;
     }
 
