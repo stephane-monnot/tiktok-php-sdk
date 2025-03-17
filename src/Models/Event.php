@@ -41,7 +41,7 @@ class Event extends Model
         return $this;
     }
 
-    public function setEventId($value): self
+    public function setEventId(string $value): self
     {
         $this->event_id = $value;
 

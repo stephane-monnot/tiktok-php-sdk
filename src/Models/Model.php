@@ -106,6 +106,11 @@ class Model
             $array[$key] = $this->castValue($value);
         }
 
+        // Remove null values
+        $array = array_filter($array, function($value) {
+            return $value !== null;
+        });
+
         return $array;
     }
 
