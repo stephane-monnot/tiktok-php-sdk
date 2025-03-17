@@ -19,14 +19,14 @@ class Page extends Model
     /** @var string|null */
     public $referrer = null;
 
-    public function setUrl(string $value): self
+    public function setUrl(?string $value): self
     {
         $this->url = $value;
 
         return $this;
     }
 
-    public function setReferrer(string $value): self
+    public function setReferrer(?string $value): self
     {
         $this->referrer = $value;
 
