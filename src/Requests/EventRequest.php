@@ -4,8 +4,6 @@ namespace Msaaq\TikTok\Requests;
 
 use Exception;
 use Illuminate\Http\Client\PendingRequest;
-use Illuminate\Support\Facades\Log;
-use Msaaq\TikTok\Constants\EventSource;
 use Msaaq\TikTok\Exceptions\AccessTokenIncorrectOrRevokedException;
 use Msaaq\TikTok\Exceptions\NoPermissionException;
 use Msaaq\TikTok\Models\Event;
@@ -68,7 +66,6 @@ class EventRequest
             $payload['test_event_code'] = $this->test_event_code;
         }
 
-        Log::info($payload);
         $request = $this->http->post('/event/track/', $payload);
 
         $request->onError(function ($request) {
